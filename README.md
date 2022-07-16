@@ -16,11 +16,10 @@ DNS-over-HTTPS (DoH) is a standard for performing DNS resolution via via the HTT
 
 ## White Paper
 The NSA also recommends to take a similar approach and blocking DoH. Read more [here](https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/2471956/nsa-recommends-how-enterprises-can-securely-adopt-encrypted-dns/).
-## How to use:**
+## How to use
 
 Pulls DoH domains and resolves them to IP addresses (from: https://github.com/curl/curl/wiki/DNS-over-HTTPS). Then it creates a Network Group Object in Firepower to be blocked (or something else). This can be used to block DoH and enforce Umbrella. More information an that can be found on the following link: https://support.umbrella.com/hc/en-us/articles/230904088-Preventing-Circumvention-of-Cisco-Umbrella-with-Firewall-Rules
-
-**Installation**
+## Installation
 
 These instructions will enable you to download the script and run it, so that the output can be used in Firepower as Group Objects. What do you need to get started? Please find a list of tasks below:
 
