@@ -31,9 +31,9 @@ These instructions will enable you to download the script and run it, so that th
 
 3. A Network Group object will be created automatically during the first run of the script.
 
-4. It is also recommended to download an SSL certificate from FMC and put it in the same folder as the scripts. This will be used to securely connect to FMC. In the `**config_file.json file**`, set the `*"SSL_VERIFY"*` parameter to `*true*`, and then set `*"SSL_CERT"*` to be the path to the FMC's certificate.
+4. It is also recommended to download an SSL certificate from FMC and put it in the same folder as the scripts. This will be used to securely connect to FMC. In the `config_file.json` file, set the `SSL_VERIFY` parameter to `true`, and then set `SSL_CERT` to be the path to the FMC's certificate.
 
-5. If you do not have the needed Python libraries set up, you will get an error when executing the script. You will need to install the `*"requirements.txt"*` file like this (make sure you are in the same directory as the cloned files live):
+5. If you do not have the needed Python libraries set up, you will get an error when executing the script. You will need to install the `requirements.txt` file like this (make sure you are in the same directory as the cloned files live):
 
 ```
 pip install -r requirements.txt
@@ -45,13 +45,13 @@ pip install -r requirements.txt
 python3.6 doh_ip_resolving.py
 ```
 
-7. Optionally you can let this script run periodically, by setting `*"SERVICE"*` to `*true*` in the `**config_file.json**` file. In line 244 of the `**doh_ip_resolving.py**` the time-period is set, per default it is set to an hour (Microsoft recommends you check the version daily, or at the most, hourly):
+7. Optionally you can let this script run periodically, by setting `SERVICE` to `true` in the `config_file.json` file. In line 244 of the `doh_ip_resolving.py` the time-period is set, per default it is set to an hour (Microsoft recommends you check the version daily, or at the most, hourly):
 
 ```
 intervalScheduler(WebServiceParser, 3600) #set to 1 hour
 ```
 
-8. Finally, if you want to automatically deploy the policies, you can set `*"AUTO_DEPLOY"*` to *true* in the `**config_file.json**` file. <br>`**Be very careful with this, as unfinished policies might be deployed by doing so.**`</br>
+8. Finally, if you want to automatically deploy the policies, you can set `AUTO_DEPLOY` to *true* in the `config_file.json` file. **Be very careful with this, as unfinished policies might be deployed by doing so.**
 
 This can be an example of a policy in FMC:
 
